@@ -4,5 +4,5 @@ pub mod key_service;
 pub mod traits;
 
 pub use hash_service::*;
-pub use jwt::jwt_service::*;
+pub use jwt::*;
 pub use key_service::*;
