@@ -1,0 +1,11 @@
+[package]
+name = "claw-crypto"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+bcrypt = { workspace = true }
+claw-crypto-interface = { path = "../claw-crypto-interface" }
+jsonwebtoken = { workspace = true }
+rand = { workspace = true }
+serde = { workspace = true }

@@ -1,0 +1,10 @@
+[workspace]
+resolver = "2"
+members = ["claw-crypto", "claw-crypto-interface"]
+
+[workspace.dependencies]
+rand = "0.8.5"
+bcrypt = "0.15.0"
+mockall = "0.13.0"
+jsonwebtoken = "9.2.0"
+serde = { version = "1.0.210", features = ["derive"] }
