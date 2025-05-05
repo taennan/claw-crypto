@@ -7,13 +7,13 @@ use serde::{de::DeserializeOwned, Serialize};
 use std::marker::PhantomData;
 
 #[derive(Debug, PartialEq, Clone)]
-pub struct JwtService<'a, C> {
-    secret: &'a str,
+pub struct JwtService<C> {
+    secret: String,
     marker: PhantomData<C>,
 }
 
-impl<'a, C> JwtService<'a, C> {
-    pub fn new(secret: &'a str) -> Self {
+impl<C> JwtService<C> {
+    pub fn new(secret: String) -> Self {
         Self {
             secret,
             marker: PhantomData,
@@ -21,7 +21,7 @@ impl<'a, C> JwtService<'a, C> {
     }
 }
 
-impl<'a, C> JwtServiceTrait<C> for JwtService<'a, C>
+impl<C> JwtServiceTrait<C> for JwtService<C>
 where
     C: Serialize + DeserializeOwned,
 {
