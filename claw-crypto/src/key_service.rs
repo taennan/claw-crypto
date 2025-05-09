@@ -69,6 +69,22 @@ mod tests {
         assert_eq!(actual, expected);
     }
 
+    // NOTE: Not guaranteed, but very unlikely to fail
+    #[test]
+    fn it_generates_random_string() {
+        let strings: Vec<String> = (0..5).map(|_| KeyService.secure_string(32)).collect();
+
+        let first = &strings[0];
+        for (i, other) in strings.iter().skip(1).enumerate() {
+            assert_ne!(
+                first,
+                other,
+                "First string is identical to string at index {}",
+                i + 1
+            );
+        }
+    }
+
     #[test]
     fn it_generates_random_string_of_specified_length() {
         let expected = 10usize;
