@@ -118,7 +118,7 @@ dependencies = [
 
 [[package]]
 name = "claw-crypto"
-version = "0.2.0"
+version = "0.3.0"
 dependencies = [
  "bcrypt",
  "claw-crypto-interface",
@@ -129,7 +129,7 @@ dependencies = [
 
 [[package]]
 name = "claw-crypto-interface"
-version = "0.1.0"
+version = "0.2.0"
 dependencies = [
  "chrono",
  "mockall",
