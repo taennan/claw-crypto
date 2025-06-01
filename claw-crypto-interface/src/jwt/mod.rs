@@ -4,4 +4,4 @@ pub mod models;
 
 pub use jwt_result::{JwtError, JwtResult};
 pub use jwt_service::{JwtService, MockJwtService};
-pub use models::JwtClaims;
+pub use models::{JwtClaims, JwtClaimsOptions};
